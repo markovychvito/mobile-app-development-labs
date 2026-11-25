@@ -1,0 +1,2 @@
+lib/arm64-v8a/libVkLayer_khronos_validation.so->io.flutter:arm64_v8a_debug:1.0.0-371f77202a73e8dff57a8b3bff75bca55c090aee
+lib/arm64-v8a/libflutter.so->io.flutter:arm64_v8a_debug:1.0.0-371f77202a73e8dff57a8b3bff75bca55c090aee

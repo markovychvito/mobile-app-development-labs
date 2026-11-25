@@ -1,0 +1,33 @@
+name: Flutter CI
+
+# Запускати перевірку при створенні Pull Request у гілку main
+on:
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Отримання коду з репозиторію
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Встановлення Flutter
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      # 3. Завантаження залежностей
+      - name: Install dependencies
+        run: flutter pub get
+
+      # 4. Перевірка форматування коду
+      - name: Verify formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+      # 5. Статичний аналіз коду (Linter)
+      - name: Analyze project source
+        run: flutter analyze
