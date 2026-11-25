@@ -8,7 +8,7 @@ import 'package:my_project/widgets/icon_badge.dart';
 class DeviceCard extends StatelessWidget {
   const DeviceCard({
     required this.name,
-    required this.room,
+    required this.location,
     required this.status,
     required this.icon,
     required this.isOn,
@@ -17,7 +17,7 @@ class DeviceCard extends StatelessWidget {
   });
 
   final String name;
-  final String room;
+  final String location;
   final String status;
   final IconData icon;
   final bool isOn;
@@ -56,7 +56,7 @@ class DeviceCard extends StatelessWidget {
                 ),
               ),
               Text(
-                room,
+                location,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: textTheme.bodySmall?.copyWith(

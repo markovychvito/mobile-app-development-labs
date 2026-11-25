@@ -41,7 +41,7 @@ class ProfileScreen extends StatelessWidget {
                 label: 'З нами з',
                 value: MockData.memberSince,
               ),
-              const SectionTitle(title: 'Мій дім'),
+              const SectionTitle(title: 'Моя лабораторія'),
               InfoTile(
                 icon: Icons.devices_other,
                 label: 'Підключені пристрої',

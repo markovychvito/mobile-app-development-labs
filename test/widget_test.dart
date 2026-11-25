@@ -43,7 +43,7 @@ void main() {
   });
 
   testWidgets('Navigation: login -> registration -> back', (tester) async {
-    await tester.pumpWidget(const SmartHomeApp());
+    await tester.pumpWidget(const HomeLabApp());
     expect(find.byType(LoginScreen), findsOneWidget);
 
     await tester.tap(find.text('Зареєструватися'));
@@ -58,7 +58,7 @@ void main() {
   testWidgets('Navigation: login -> dashboard -> profile -> logout', (
     tester,
   ) async {
-    await tester.pumpWidget(const SmartHomeApp());
+    await tester.pumpWidget(const HomeLabApp());
 
     await tester.tap(find.widgetWithText(FilledButton, 'Увійти'));
     await tester.pumpAndSettle();

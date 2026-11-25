@@ -13,7 +13,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AuthLayout(
       title: 'Вхід',
-      subtitle: 'Керуйте своїм розумним домом з будь-якого місця',
+      subtitle: 'Стежте за своєю домашньою лабораторією звідусіль',
       children: [
         const AppTextField(
           label: 'Електронна пошта',

@@ -19,16 +19,12 @@ class AppLogo extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.all(AppSpacing.s),
-            child: Icon(
-              Icons.home_work_outlined,
-              color: scheme.onPrimary,
-              size: 32,
-            ),
+            child: Icon(Icons.dns_outlined, color: scheme.onPrimary, size: 32),
           ),
         ),
         const SizedBox(width: AppSpacing.s),
         Text(
-          'SmartHome',
+          'HomeLab',
           style: Theme.of(context).textTheme.titleLarge
               ?.copyWith(fontWeight: FontWeight.bold),
         ),

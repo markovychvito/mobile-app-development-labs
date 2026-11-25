@@ -20,7 +20,7 @@ class DashboardScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Мій дім'),
+        title: const Text('Моя лабораторія'),
         actions: [
           IconButton(
             tooltip: 'Профіль',
@@ -36,25 +36,25 @@ class DashboardScreen extends StatelessWidget {
             children: [
               const GreetingHeader(
                 title: 'Привіт, Андрію!',
-                subtitle: 'Усі системи працюють у штатному режимі',
+                subtitle: 'Усі сервери працюють у штатному режимі',
               ),
               const SizedBox(height: AppSpacing.l),
               const StatsRow(
                 children: [
                   StatTile(
                     icon: Icons.thermostat,
-                    value: '22.5 °C',
-                    label: 'Температура',
+                    value: '26 °C',
+                    label: 'Темп. стійки',
                   ),
                   StatTile(
-                    icon: Icons.water_drop_outlined,
-                    value: '45%',
-                    label: 'Вологість',
+                    icon: Icons.speed,
+                    value: '18%',
+                    label: 'Навантаження',
                   ),
                   StatTile(
                     icon: Icons.bolt,
-                    value: '3.2 кВт·год',
-                    label: 'Енергія',
+                    value: '86 Вт',
+                    label: 'Споживання',
                   ),
                 ],
               ),
@@ -68,7 +68,7 @@ class DashboardScreen extends StatelessWidget {
                   final device = devices[index];
                   return DeviceCard(
                     name: device.name,
-                    room: device.room,
+                    location: device.location,
                     status: device.status,
                     icon: device.icon,
                     isOn: device.isOn,

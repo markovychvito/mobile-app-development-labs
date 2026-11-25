@@ -13,7 +13,7 @@ class RegistrationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AuthLayout(
       title: 'Реєстрація',
-      subtitle: 'Створіть акаунт, щоб додати свої пристрої',
+      subtitle: 'Створіть акаунт, щоб додати свої сервери',
       children: [
         const AppTextField(label: "Ім'я", icon: Icons.person_outline),
         const AppTextField(
