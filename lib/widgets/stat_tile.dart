@@ -27,7 +27,8 @@ class StatTile extends StatelessWidget {
           children: [
             Icon(icon, color: Theme.of(context).colorScheme.primary),
             const SizedBox(height: AppSpacing.s),
-            // FittedBox зменшує текст замість переповнення на вузьких екранах.
+            // FittedBox зменшує текст замість переповнення чи обрізання
+            // на вузьких екранах (iPhone SE / iPhone 8).
             FittedBox(
               fit: BoxFit.scaleDown,
               child: Text(
@@ -37,11 +38,15 @@ class StatTile extends StatelessWidget {
                 ),
               ),
             ),
-            Text(
-              label,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: textTheme.bodySmall?.copyWith(color: AppColors.textMuted),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                label,
+                maxLines: 1,
+                style: textTheme.bodySmall?.copyWith(
+                  color: AppColors.textMuted,
+                ),
+              ),
             ),
           ],
         ),

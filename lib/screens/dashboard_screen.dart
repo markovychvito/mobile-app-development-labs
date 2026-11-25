@@ -54,7 +54,7 @@ class DashboardScreen extends StatelessWidget {
                   StatTile(
                     icon: Icons.bolt,
                     value: '3.2 кВт·год',
-                    label: 'Енергія сьогодні',
+                    label: 'Енергія',
                   ),
                 ],
               ),
